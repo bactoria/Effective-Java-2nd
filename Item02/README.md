@@ -6,18 +6,16 @@
 2. JavaBeans Pattern
 3. Builder Pattern
   
-  ***
-  ```java
+***
+```java
 // Telescoping constructor pattern - does not scale well!
 public class NutritionFacts {
-  //required
-	private final int servingSize; // (mL)
-	private final int servings; // (per container)
-	//optional
-  private final int calories; //(cal)
-	private final int fat; // (g)
-	private final int sodium; // (mg)
-	private final int carbohydrate; // (g)
+	private final int servingSize; // (mL) required
+	private final int servings; // (per container) required
+	private final int calories; // optional
+	private final int fat; // (g) optional
+	private final int sodium; // (mg) optional
+	private final int carbohydrate; // (g) optional
 
 	public NutritionFacts(int servingSize, int servings) {
 		this(servingSize, servings, 0);
@@ -104,6 +102,14 @@ public class NutritionFacts {
 }
 ```
 
+객체 생성이후에 그 객체가 완전히 생성이 끝났다고 할수없다.
+객체 일관성이 깨질수가 있는것이다. 
+여기서는 생성자 인자가 유효한지 검사하여 일관성을 보장하는 단순한 방법을 사용할 수 없다.
+또한 이 패턴으로는 Immutable Class를 만들 수 없다. 아래와 같이 언제든지 상태를 바꿀 수가 있다.
+<Img src="../Images/Item02_JavaBean_Pattern.PNG" width="80%"> </Img>
+
+thread-Safety하다고도 볼수없다.
+
 ***
 
 ```java
@@ -167,5 +173,15 @@ public class NutritionFacts {
     }
 }
 ```
+```java
+	NutritionFacts cocaCola = new NutritionFacts.Builder(240,8).calories(100).sodium(35).carbohydrate(27).build();
+```
 
-![Alt text](/item02/nutritionFacts.png)
+<Img src="../Images/Item02_Builder_Pattern.PNG" width="50%"> </Img>
+Object Method만 보인다. 객체 생성이후 객체상태를 변경할 수 없다.
+
+Builder Pattern은 인자가 많은 생성자나 특히 대부분의 인자가 선택적 인자인 상황에 유용하다.
+우선 생성자와 static factory method로 객체생성하기로 했더라도,해당 클래스에 인자가 추가되면 빌더패턴을 적용해야 할것이다.
+하지만 이때는 미리 만들어둔 constructor와 static factor method를 걷어내야 한다.
+확장가능성을 잘 보면서 객체를 어떻게 생성할것인지 정하자.
+

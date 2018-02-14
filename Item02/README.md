@@ -29,13 +29,11 @@ public class NutritionFacts {
 		this(servingSize, servings, calories, fat, 0);
 	}
 
-	public NutritionFacts(int servingSize, int servings, int calories, int fat,
-			int sodium) {
+	public NutritionFacts(int servingSize, int servings, int calories, int fat, int sodium) {
 		this(servingSize, servings, calories, fat, sodium, 0);
 	}
 
-	public NutritionFacts(int servingSize, int servings, int calories, int fat,
-			int sodium, int carbohydrate) {
+	public NutritionFacts(int servingSize, int servings, int calories, int fat, int sodium, int carbohydrate) {
 		this.servingSize = servingSize;
 		this.servings = servings;
 		this.calories = calories;
@@ -50,9 +48,15 @@ public class NutritionFacts {
 }
 ```
 기본으로 생성자를 만드는 방법이다.  
-자바 입문 서적에서 생성자를 설명할 때 다루는 방법이다.  
+
+인스턴스변수 6개 중 2개는 필수, 4개는 선택이다.   
+
+자바 입문 서적에서 생성자를 설명할 때 다루는 방법이다.  
+
 일단 가독성이 떨어져서 유지보수가 용이하지 못하다.
-또, 네이밍이 없어서 실수할 가능성이 크다  
+
+또, 네이밍이 없어서 실수할 가능성이 크다.
+
 ***
 
 ```java
@@ -60,7 +64,7 @@ public class NutritionFacts {
 public class NutritionFacts {
 	// Parameters initialized to default values (if any)
 	private int servingSize = -1; // Required; no default value
-	private int servings = -1; // "     " "      "
+	private int servings = -1; //Required;
 	private int calories = 0;
 	private int fat = 0;
 	private int sodium = 0;

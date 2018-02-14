@@ -1,7 +1,7 @@
 ## Item 02: Consider a builder when faced with many constructor parameters
 (생성자 인자가 많을 때는 Builder패턴 적용을 고려하라)
 
-** 아래에서 소개될 패턴들**
+**아래에서 소개될 패턴들**
 1. Telescoping constructor pattern
 2. JavaBeans Pattern
 3. Builder Pattern

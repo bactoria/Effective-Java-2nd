@@ -1,7 +1,7 @@
 ## Item 02: Consider static factory methods instead of constructors
 (생성자 대신 static factory method를 사용할 수 없는지 생각해 보라)
 
-**생성자 패턴**
+** 아래에서 소개될 패턴들**
 1. Telescoping constructor pattern
 2. JavaBeans Pattern
 3. Builder Pattern

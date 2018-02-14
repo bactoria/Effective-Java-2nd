@@ -1,5 +1,5 @@
-## Item 02: Consider static factory methods instead of constructors
-(생성자 대신 static factory method를 사용할 수 없는지 생각해 보라)
+## Item 2: Consider a builder when faced with many constructor parameters
+(생성자 인자가 많을 때는 Builder패턴 적용을 고려하라)
 
 ** 아래에서 소개될 패턴들**
 1. Telescoping constructor pattern

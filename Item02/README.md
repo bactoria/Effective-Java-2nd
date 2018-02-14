@@ -106,7 +106,7 @@ public class NutritionFacts {
 객체 일관성이 깨질수가 있는것이다. 
 여기서는 생성자 인자가 유효한지 검사하여 일관성을 보장하는 단순한 방법을 사용할 수 없다.
 또한 이 패턴으로는 Immutable Class를 만들 수 없다. 아래와 같이 언제든지 상태를 바꿀 수가 있다.
-<Img src="../Images/Item02_JavaBean_Pattern.PNG" width="80%"> </Img>
+<Img src="../Images/Item02_JavaBean_Pattern.PNG" width="30%"> </Img>
 
 thread-Safety하다고도 볼수없다.
 
@@ -177,7 +177,7 @@ public class NutritionFacts {
 	NutritionFacts cocaCola = new NutritionFacts.Builder(240,8).calories(100).sodium(35).carbohydrate(27).build();
 ```
 
-<Img src="../Images/Item02_Builder_Pattern.PNG" width="50%"> </Img>
+<Img src="../Images/Item02_Build_Pattern.PNG" width="50%"> </Img>
 Object Method만 보인다. 객체 생성이후 객체상태를 변경할 수 없다.
 
 Builder Pattern은 인자가 많은 생성자나 특히 대부분의 인자가 선택적 인자인 상황에 유용하다.

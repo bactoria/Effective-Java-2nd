@@ -1,4 +1,4 @@
-## Item 1: Consider static factory methods instead of constructors
+## Item 01: Consider static factory methods instead of constructors
    (생성자 대신 static factory method를 사용할 수 없는지 생각해 보라)
 
 

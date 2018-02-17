@@ -6,9 +6,9 @@
 2. JavaBeans Pattern
 3. Builder Pattern
   
-***
+  
+## Telescoping constructor pattern
 ```java
-// Telescoping constructor pattern - does not scale well!
 public class NutritionFacts {
 	private final int servingSize; // (mL) required
 	private final int servings; // (per container) required
@@ -57,10 +57,9 @@ public class NutritionFacts {
 
 또, 네이밍이 없어서 실수할 가능성이 크다.
 
-***
 
+## JavaBeans Pattern
 ```java
-// JavaBeans Pattern - allows inconsistency, mandates mutability
 public class NutritionFacts {
 	// Parameters initialized to default values (if any)
 	private int servingSize = -1; // Required; no default value
@@ -121,10 +120,9 @@ public class NutritionFacts {
 
 thread-Safety하다고도 볼수없다.  
 
-***
-
+  
+## Builder Pattern
 ```java
-// Builder Pattern
 public class NutritionFacts {
     private final int servingSize;
     private final int servings;
@@ -185,7 +183,11 @@ public class NutritionFacts {
 }
 ```
 ```java
-	NutritionFacts cocaCola = new NutritionFacts.Builder(240,8).calories(100).sodium(35).carbohydrate(27).build();
+	NutritionFacts cocaCola = new NutritionFacts.Builder(240,8)
+						    .calories(100)
+						    .sodium(35)
+						    .carbohydrate(27)
+						    .build();
 ```
 
 <Img src="../Images/Item02_Build_Pattern.PNG" width="50%"> </Img>  

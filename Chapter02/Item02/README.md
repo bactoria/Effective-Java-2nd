@@ -1,4 +1,4 @@
-## Item 02: Consider a builder when faced with many constructor parameters
+﻿## Item 02: Consider a builder when faced with many constructor parameters
 (생성자 인자가 많을 때는 Builder패턴 적용을 고려하라)
 
 **아래에서 소개될 패턴들**
@@ -116,7 +116,7 @@ public class NutritionFacts {
 
 또한 이 패턴으로는 Immutable Class를 만들 수 없다. 아래와 같이 언제든지 상태를 바꿀 수가 있다.  
 
-<Img src="../Images/Item02_JavaBean_Pattern.PNG" width="30%"> </Img>  
+<Img src="../../Images/Item02_JavaBean_Pattern.PNG" width="30%"> </Img>  
 
 thread-Safety하다고도 볼수없다.  
 
@@ -190,7 +190,7 @@ public class NutritionFacts {
 						    .build();
 ```
 
-<Img src="../Images/Item02_Build_Pattern.PNG" width="50%"> </Img>  
+<Img src="../../Images/Item02_Build_Pattern.PNG" width="50%"> </Img>  
   
 Object Method만 보인다. 객체 생성이후 객체상태를 변경할 수 없다.  
   

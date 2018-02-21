@@ -1,15 +1,15 @@
-## Item 03: Enforce the singleton property with a private constructor or an enum type
+## Item 04: Enforce noninstantiability with a private constructor
 (객체 생성을 막을 때는 private 생성자를 사용하라 )
 
 **객체 생성을 막는 것에는 어떤것들이 있을까?**
 1. `java.lang.Math`
 2. `java.util.Arrays`
 3. `java.util.Collections`
-4. final 클래스에 적용할 메서드들을 모아놓을 때
+
 
 위 클래스들은 객체를 만들 목적의 클래스가 아니다.
 
-
+---
 ## 1. `java.lang.Math`
 ```java
 public final class Math {
@@ -25,15 +25,16 @@ public final class Math {
       return (a >= b) ? a : b;
     }
 
-    ...//생략
-}
+    ...//생략!
+    }
 ```
 
 Math.max(), Math.sqrt() 뭐 이런것들을 객체생성해서 썼던가? 아니다.
 
 `java.lang.Math`클래스는 변수, 메소드 모두 `static`으로 선언되어 있기 때문에 클래스가 로딩될 때 static자원들은 메모리에 올라가서 프로그램 종료시 소멸된다.
 
-## 2. Arrays
+---
+## 2. `java.util.Arrays`
 ```java
 public class Arrays {
   // Suppresses default constructor, ensuring non-instantiability.
@@ -49,8 +50,8 @@ Arrays.sort() 도 객체생성없이 사용할 수 있었는데,
 
 여기도 죄다 `static`으로 선언되어 있다.
 
-
-## 3. Collections
+---
+## 3. `java.util.Collections`
 ```java
 public class Collections {
   // Suppresses default constructor, ensuring non-instantiability.
@@ -87,4 +88,4 @@ public class UtilityClass {
 하위클래스에서는 명시적이든 묵시적이든 호출할 수 있어야하는데 호출할 수가 없기 때문이다.
 
 > *`java.lang.Math` 는 final 선언되어있다.*  
-> *다른 두개는 왜 final선언 안되있는가?*
+> *다른 두개는 왜 final 선언 안한걸까?*

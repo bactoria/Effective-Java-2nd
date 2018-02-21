@@ -6,8 +6,7 @@
 2. `java.util.Arrays`
 3. `java.util.Collections`
 
-
-위 클래스들은 객체를 만들 목적의 클래스가 아니다.
+(위 클래스들은 객체를 만들 목적의 클래스가 아니다.)
 
 ---
 ## 1. `java.lang.Math`

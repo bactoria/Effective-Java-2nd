@@ -5,8 +5,9 @@
 1. Telescoping constructor pattern
 2. JavaBeans Pattern
 3. Builder Pattern
-  
-  
+
+(결론: Builder Pattern 을 써라.)
+
 ## Telescoping constructor pattern
 ```java
 public class NutritionFacts {
@@ -120,7 +121,7 @@ public class NutritionFacts {
 
 thread-Safety하다고도 볼수없다.  
 
-  
+
 ## Builder Pattern
 ```java
 public class NutritionFacts {
@@ -191,9 +192,9 @@ public class NutritionFacts {
 ```
 
 <Img src="../../Images/Item02_Build_Pattern.PNG" width="50%"> </Img>  
-  
+
 Object Method만 보인다. 객체 생성이후 객체상태를 변경할 수 없다.  
-  
+
 Builder Pattern은 인자가 많은 생성자나 특히 대부분의 인자가 선택적 인자인 상황에 유용하다.  
 
 우선 생성자와 static factory method로 객체생성하기로 했더라도,해당 클래스에 인자가 추가되면 빌더패턴을 적용해야 할것이다.  
@@ -201,4 +202,3 @@ Builder Pattern은 인자가 많은 생성자나 특히 대부분의 인자가 �
 하지만 이때는 미리 만들어둔 constructor와 static factor method를 걷어내야 한다.  
 
 확장가능성을 잘 보면서 객체를 어떻게 생성할것인지 정하자.  
-

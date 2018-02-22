@@ -1,5 +1,5 @@
-## Item 05: Avoid creating unnecessary objects
-( 불필요한 객체는 만들지 말라 )
+## Item 05 : 불필요한 객체는 만들지 말라
+(Avoid creating unnecessary objects)
 
 **불필요한 객체 만들지 않는법**
 1. String
@@ -13,32 +13,33 @@
   String s1 = new String("ABC");
   String s2 = new String("ABC");
 
-  System.out.println(s2 == s1); //false
+  System.out.println(s2 == s1); //false(참조값 다름)
 ```
-이렇게 하면 힙영역에 객체 2개가 생성이 된다.
+s1, s2에서 각각 객체생성을 했으므로 힙영역에 객체 2개가 생성이 된다.
 
-String immutable class라서 이렇게 할 필요없이
+`String.class`는 불변 클래스(immutable class)라서
 
-객체 하나에 같은참조값을 가지면 된다.
+같은 문자열을 다른 객체로 만들 이유가 없다.
 
+객체 하나를 생성하고 같은 참조값을 가지면 된다.
+(어짜피 문자열이 바뀌면 새로 객체를 생성하니까)
 ```java
   String s1 = "ABC";
   String s2 = "ABC";
-  System.out.println(s2 == s1); //true
+  System.out.println(s2 == s1); //true(참조값 같음)
 
 ```
-s1에서 String Constant pool에 한번만 할당되고,
+`s1`에서 `String Constant pool`에 문자열 "ABC"가 할당되고,
 
-s2는 s1과 같은 참조값을 가진다.
+`s2`는 `s1`과 같은 참조값을 가진다.
 
-불필요한 객체 생성을 막을 수 있다.
 
 ## 2. static factory method
 ```java
   System.out.println(new Boolean("true")); //새로운 객체 생성
   System.out.println(Boolean.valueOf("true")); // static 자원 사용
 ```
-Item01 에서의 static factory method의 장점이었다.
+Item01 에서의 static factory method의 2번째 장점과 같다.
 
 ## 3. static initializer
 ```java
@@ -62,8 +63,11 @@ Public class Person {
     }
 }
 ```
-isBabyBoomer() 함수 호출시 마다
-Calendar 객체, TimeZone 객체, Date객체 2개 를 만들어낸다.
+
+위에서 `isBabyBoomer()` 함수 호출시 마다
+`Calendar`형 객체, `TimeZone`형 객체, `Date`형 객체 2개 를 만들어낸다.
+
+모두 같은 값을 가지는데 함수 호출시마다 객체를 만들 이유가 없다.
 
 ```java
 Public class Person {
@@ -93,11 +97,11 @@ Public class Person {
 
 }
 ```
-이제 클래스 초기화시 한번만 만들게 되었다.
+`static`을 이용하여 클래스 초기화시 객체를 한번씩만 만들게 되었다.
 
-BOOM_START, BOOM_END 가 상수라는 것도 직관적으로 알 수 있다.
+`BOOM_START`, `BOOM_END` 가 상수라는 것도 직관적으로 알 수 있다.
 
-isBabyBommer()가 자주 실행될 수록 성능은 더 좋아질 것이다.
+`isBabyBommer()`가 자주 실행될 수록 성능은 더 좋아질 것이다.
 
 반면, 한번도 실행되지 않는다면 쓰데없는 초기화였다.
 
@@ -116,9 +120,9 @@ Public static void main(String[] args) {
 
 }
 ```
-sum이 Long으로 선언되었다.
+변수`sum`이 `Long`으로 선언되었다.
 
-for문을 돌 때마다 새로운 Long 형 객체를 생성할 것이다.
+for문을 돌 때마다 새로운 `Long` 형 객체를 생성할 것이다.
 
 
 
@@ -137,7 +141,7 @@ Public static void main(String[] args) {
 }
 ```
 
-Long에서 -> long으로만 바꿨다.
+`Long`에서 -> `long`으로만 바꿨다.
 
 객체표현형 대신 기본자료형을 사용하고,
 생각지도 못한 자동 객체화(Auto Boxing)가 발생하지 않도록 유의하자.

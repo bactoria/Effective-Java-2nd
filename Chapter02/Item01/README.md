@@ -1,5 +1,5 @@
-## Item 01: Consider static factory methods instead of constructors
-   (생성자 대신 static factory method를 사용할 수 없는지 생각해 보라)
+## Item 01 : 생성자 대신 static factory method를 사용할 수 없는지 생각해 보라
+(Consider static factory methods instead of constructors)
 
 
 **정적 팩토리 메서드 (static factory method) 장단점**

@@ -1,5 +1,5 @@
-## Item 04: Enforce noninstantiability with a private constructor
-(객체 생성을 막을 때는 private 생성자를 사용하라 )
+## Item 04 : 객체 생성을 막을 때는 private 생성자를 사용하라
+(Enforce noninstantiability with a private constructor)
 
 **객체 생성을 막는 것에는 어떤것들이 있을까?**
 1. `java.lang.Math`
@@ -28,9 +28,9 @@ public final class Math {
     }
 ```
 
-Math.max(), Math.sqrt() 뭐 이런것들을 객체생성해서 썼던가? 아니다.
+`Math.max()`, `Math.sqrt()` 이 함수들을 객체생성해서 썼던가? 아니다.
 
-`java.lang.Math`클래스는 변수, 메소드 모두 `static`으로 선언되어 있기 때문에 클래스가 로딩될 때 static자원들은 메모리에 올라가서 프로그램 종료시 소멸된다.
+`java.lang.Math`클래스는 변수, 메소드 모두 `static`으로 선언되어 있기 때문에 클래스가 로딩될 때 `static` 자원들은 메모리에 올라가서 프로그램 종료시 소멸된다.
 
 ---
 ## 2. `java.util.Arrays`
@@ -64,7 +64,7 @@ public class Collections {
 
 }
 ```
-Collections.sort() 이것도 마찬가지다. `static` 덕분에 객체생성 없이 사용할 수 있다.
+`Collections.sort()` 이것도 마찬가지다. `static` 덕분에 객체생성 없이 사용할 수 있다.
 
 
 ---
@@ -86,5 +86,5 @@ public class UtilityClass {
 
 하위클래스에서는 명시적이든 묵시적이든 호출할 수 있어야하는데 호출할 수가 없기 때문이다.
 
-> *`java.lang.Math` 는 final 선언되어있다.*  
-> *다른 두개는 왜 final 선언 안한걸까?*
+> *`java.lang.Math` 는 `final` 선언되어있다.*  
+> *다른 두개는 왜 `final` 선언 하지 않은걸까?*

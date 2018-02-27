@@ -1,4 +1,4 @@
-﻿## Item 02 : 생성자 인자가 많을 때는 Builder패턴 적용을 고려하라
+## Item 02 : 생성자 인자가 많을 때는 Builder패턴 적용을 고려하라
 (Consider a builder when faced with many constructor parameters)
 
 **아래에서 소개될 패턴들**
@@ -8,7 +8,7 @@
 
 (결론: Builder Pattern 을 써라.)
 
-## Telescoping constructor pattern
+## 1. Telescoping constructor pattern
 ```java
 public class NutritionFacts {
 	private final int servingSize; // (mL) required
@@ -59,7 +59,7 @@ public class NutritionFacts {
 또, 네이밍이 없어서 실수할 가능성이 크다.
 
 
-## JavaBeans Pattern
+## 2. JavaBeans Pattern
 ```java
 public class NutritionFacts {
 	// Parameters initialized to default values (if any)
@@ -122,7 +122,7 @@ public class NutritionFacts {
 thread-Safety하다고도 볼수없다.  
 
 
-## Builder Pattern
+## 3. Builder Pattern
 ```java
 public class NutritionFacts {
     private final int servingSize;

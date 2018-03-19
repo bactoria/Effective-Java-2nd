@@ -2,11 +2,6 @@
 
 <br/>
 <br/>
-
->
-
-
-
 ### 요약
 **1. public class는 변경가능 필드를 외부로 공개하면 안된다.**
 **2. package-private class/ private nested class의 필드는 public이 바람직할 때도 있다.**

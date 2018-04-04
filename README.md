@@ -16,18 +16,18 @@
 
 ### 모든 객체의 공통 메서드
 
-[Item 08: equals를 재정의할 때는 일반 규약을 따르라](https://github.com/bactoria/Effective-Java-2nd/tree/master/Chapter02/Item06.md)
+[Item 08: equals를 재정의할 때는 일반 규약을 따르라](https://github.com/bactoria/Effective-Java-2nd/tree/master/Chapter03/Item08.md)
 
-[Item 09: equals를 재정의할 때는 반드시 hashCode도 재정의하라](https://github.com/bactoria/Effective-Java-2nd/tree/master/Chapter02/Item06.md)
+[Item 09: equals를 재정의할 때는 반드시 hashCode도 재정의하라](https://github.com/bactoria/Effective-Java-2nd/tree/master/Chapter03/Item09.md)
 
-[Item 10: toString은 항상 재정의하라](https://github.com/bactoria/Effective-Java-2nd/tree/master/Chapter02/Item06.md)
+[Item 10: toString은 항상 재정의하라](https://github.com/bactoria/Effective-Java-2nd/tree/master/Chapter03/Item10.md)
 
-[Item 12: Comparable 구현을 고려하라](https://github.com/bactoria/Effective-Java-2nd/tree/master/Chapter02/Item06.md)
+[Item 12: Comparable 구현을 고려하라](https://github.com/bactoria/Effective-Java-2nd/tree/master/Chapter03/Item12.md)
 
 ### 클래스와 인터페이스
 
-[Item 13: 클래스와 멤버의 접근 권한을 최소화하라](https://github.com/bactoria/Effective-Java-2nd/tree/master/Chapter02/Item06.md)
+[Item 13: 클래스와 멤버의 접근 권한을 최소화하라](https://github.com/bactoria/Effective-Java-2nd/tree/master/Chapter04/Item13.md)
 
-[Item 14: public 클래스 안에는 public필드를 두지 말고 접근자 메서드를 사용하라](https://github.com/bactoria/Effective-Java-2nd/tree/master/Chapter02/Item06.md)
+[Item 14: public 클래스 안에는 public필드를 두지 말고 접근자 메서드를 사용하라](https://github.com/bactoria/Effective-Java-2nd/tree/master/Chapter04/Item14.md)
 
-[Item 15: 변경 가능성을 최소화하라](https://github.com/bactoria/Effective-Java-2nd/tree/master/Chapter02/Item06.md)
+[Item 15: 변경 가능성을 최소화하라](https://github.com/bactoria/Effective-Java-2nd/tree/master/Chapter04/Item15.md)

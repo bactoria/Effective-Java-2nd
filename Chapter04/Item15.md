@@ -80,10 +80,12 @@ final class 가 아니다.
 
 하위 호환성 때문에 다음버전 자바에 final로 바뀔리도 없다.
 
--> final로 바꿔버리면 자바 버전 업그레이드 할때 각종 버그생김
+
+-> 다음 JDK버전에 final로 바꾸면?
+-> 기업에서 다음 JDK버전으로 넘어갈 때 각종 버그생김
 -> 기업에서 버전업 하려고 안함
 -> 자바 새버전 나온 의미가 없어져버림
--> 차라리 final로 바꾸지 말자
+-> 그냥 final로 바꾸지 말자
 
 <BR/>
 
@@ -94,7 +96,9 @@ public static BigInteger safeInstance (BigInteger val) {
   return val;
 }
 ```
+
 BigInteger를 반환한다면 방어적복사 시행하자.
+
 val이 계승한 객체일 수도 있으니까..
 
 ## TODO : 직렬화 부분

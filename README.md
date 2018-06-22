@@ -112,7 +112,7 @@ Item 44:
 
 Item 45:
 
-Item 46:
+[Item 46: for 문보다는 for-each 문을 사용하라](/Chapter08/Item46.md)
 
 Item 47:
 

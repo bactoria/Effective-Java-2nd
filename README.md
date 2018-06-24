@@ -116,7 +116,7 @@ Item 45:
 
 Item 47:
 
-Item 48:
+[Item 48: 정확한 답이 필요하다면 float와 double은 피하라](/Chapter08/Item48.md)
 
 Item 49:
 

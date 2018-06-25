@@ -122,7 +122,7 @@ Item 49:
 
 Item 50:
 
-Item 51:
+[Item 51: 문자열 연결 시 성능에 주의하라](/Chapter08/Item51.md)
 
 Item 52:
 

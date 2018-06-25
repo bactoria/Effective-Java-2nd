@@ -110,7 +110,7 @@ Item 44:
 
 ### 일반적인 프로그래밍 원칙들
 
-Item 45:
+[Item 45: 지역 변수의 유효범위를 최소화하라](/Chapter08/Item45.md)
 
 [Item 46: for 문보다는 for-each 문을 사용하라](/Chapter08/Item46.md)
 

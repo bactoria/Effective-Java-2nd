@@ -118,7 +118,7 @@ Item 47:
 
 [Item 48: 정확한 답이 필요하다면 float와 double은 피하라](/Chapter08/Item48.md)
 
-Item 49:
+[Item 49: 객체화된 기본 자료형 대신 기본 자료형을 이용하라](/Chapter08/Item49.md)
 
 Item 50:
 

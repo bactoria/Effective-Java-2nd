@@ -132,7 +132,7 @@ Item 54:
 
 Item 55:
 
-Item 56:
+[Item 56: 일반적으로 통용되는 작명 관습을 따르라](/Chapter08/Item56.md)
 
 &nbsp;
 

@@ -92,7 +92,7 @@ Item 37:
 
 ### Method
 
-Item 38:
+Item 38: 인자의 유효성을 검사하라
 
 Item 39:
 
